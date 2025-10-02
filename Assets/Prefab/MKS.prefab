@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5091987508267066270}
   - component: {fileID: 5091987508267066269}
   - component: {fileID: 5091987508267066268}
-  - component: {fileID: 5091987508267066274}
   - component: {fileID: 5091987508267066275}
   m_Layer: 0
   m_Name: MKS
@@ -199,18 +198,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5091987508267066274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5091987508267066265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7321aa89dd8b924cb0eaafb9c359825, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5091987508267066275
 MonoBehaviour:
   m_ObjectHideFlags: 0

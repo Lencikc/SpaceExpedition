@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Satellite
   - GarBage
+  - BlackHole
   layers:
   - Default
   - TransparentFX

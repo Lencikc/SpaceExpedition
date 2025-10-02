@@ -5,43 +5,20 @@ using UnityEngine.UI;
 
 public class CheckEndGame : MonoBehaviour
 {
-    private Collider2D cl;
-    private Text text;
+    private Animator _anim;
     private void Start()
     {
-        text = GameObject.Find("Message").GetComponent<Text>();
+        _anim = GameObject.Find("WinnerPanel").GetComponent<Animator>();
     }
-    void Update()
-    {
-        cl = GetComponent<Collider2D>();
-        //Debug.Log("work");
-        OnTriggerStay2D(cl);
-    }
-    private void OnTriggerStay2D(Collider2D col)
+
+    private void OnTriggerEnter2D(Collider2D col)
     {
      
         if (col.CompareTag("Player"))
         {
-            text.text = "Winner";
-            StartCoroutine(Cooldown(10));
-            EndGame();
+            _anim.SetFloat("MultSpeed",1f);
             Destroy(GameObject.Find("Player"));
             Destroy(gameObject);
         }
     }
-
-    private void EndGame()
-    {
-        // Завершаем игру
-        Debug.Log("endGameWinner");
-//#if UNITY_EDITOR
-//        UnityEditor.EditorApplication.isPlaying = false;
-//#else
-//        Application.Quit();
-//#endif
-    }
-    private IEnumerator Cooldown(float sec)
-    {
-        yield return new WaitForSeconds(sec);
-    } 
 }
